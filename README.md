@@ -14,7 +14,7 @@ You can set the input and output directories to your downloads folder and set `D
 
 ## Usage
 
-To run the script, make it executable by running `chmod +x webp-to-png.sh`, then run the script in the background using `./webp-to-png.sh &`. 
+To use the script, make it executable by running `chmod +x webp-to-png.sh`, then run the script in the background using `./webp-to-png.sh &`. 
 
 To run the script automatically on boot create a systemd service or use your distro's gui startup applications program (detailed instructions WIP)
 
