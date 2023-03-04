@@ -14,9 +14,9 @@ You can set the input and output directories to your downloads folder and set `D
 
 ## Usage
 
-To run the script, simply execute the `webp-to-png.sh` file using the command `./webp-to-png.sh &`. The script will monitor the specified input directory for new .webp files and convert them to .png format using the `dwebp` command. The converted .png files will be saved to the specified output directory. If the `DELETE_WEBP` option is set to `true`, the original .webp files will be deleted after conversion.
+To run the script, make it executable by running `chmod +x webp-to-png.sh`, then run the script in the background using `./webp-to-png.sh &`. 
 
-To run the script automatically in the background on boot create a systemd service or use your distro's gui startup applications program (instructions WIP)
+To run the script automatically on boot create a systemd service or use your distro's gui startup applications program (detailed instructions WIP)
 
 ## License
 
