@@ -8,7 +8,7 @@ You can set the input and output directories to your downloads folder and set `D
 
 1. Clone the repository to your local machine using `git clone https://github.com/w-m-hill/webp-to-png`.
 
-2. Install the `webp` and 'inotify-tools` packages if they are not already installed on your system. (`sudo apt install webp inotify-tools` on Ubuntu).
+2. Install the `webp` and `inotify-tools` packages if they are not already installed on your system. (`sudo apt install webp inotify-tools` on Ubuntu).
 
 3. Customize the script by editing the `config.cfg` file. Set the `INPUT_DIR` and `OUTPUT_DIR` variables to the directories where you want to monitor for new .webp files and save the converted .png files, respectively. Set the `DELETE_WEBP` variable to `true` if you want the original .webp files to be deleted after conversion.
 
