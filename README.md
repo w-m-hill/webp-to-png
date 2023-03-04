@@ -6,7 +6,7 @@ You can set the input and output directories to your downloads folder and set `D
 
 ## Installation
 
-1. Clone the repository to your local machine using `git clone https://github.com/yourusername/webp-to-png.git`.
+1. Clone the repository to your local machine using `git clone https://github.com/w-m-hill/webp-to-png`.
 
 2. Install the `webp` and 'inotify-tools` packages if they are not already installed on your system. (`sudo apt install webp inotify-tools` on Ubuntu).
 
