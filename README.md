@@ -6,7 +6,7 @@ This is a simple Bash script that monitors a directory for new .webp image files
 
 1. Clone the repository to your local machine using `git clone https://github.com/yourusername/webp-to-png.git`.
 
-2. Install the `webp` package if it is not already installed on your system. You can do this using your package manager (e.g. `sudo apt-get install webp` on Ubuntu).
+2. Install the `webp` and 'inotify-tools` packages if they are not already installed on your system. (`sudo apt install webp inotify-tools` on Ubuntu).
 
 3. Customize the script by editing the `config.cfg` file. Set the `INPUT_DIR` and `OUTPUT_DIR` variables to the directories where you want to monitor for new .webp files and save the converted .png files, respectively. Set the `DELETE_WEBP` variable to `true` if you want the original .webp files to be deleted after conversion.
 
