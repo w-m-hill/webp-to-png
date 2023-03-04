@@ -2,6 +2,8 @@
 
 This is a simple Bash script that monitors a directory for new .webp image files and converts them to .png format using the `dwebp` command from the webp package. The script can be customized using a configuration file to specify the input and output directories, and whether or not to delete the original .webp files after conversion.
 
+You can set the input and output directories to your downloads folder and set `DELETE_WEBP` to `true` to essentially override Google Images' annoying tendencey to download images as webps. 
+
 ## Installation
 
 1. Clone the repository to your local machine using `git clone https://github.com/yourusername/webp-to-png.git`.
