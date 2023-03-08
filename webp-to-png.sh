@@ -7,7 +7,7 @@ source ./config.cfg
 mkdir -p "$OUTPUT_DIR"
 
 # Monitor input directory for new .webp files
-inotifywait -m -r -e create "$INPUT_DIR" --format '%w%f' |
+inotifywait -m -e create "$INPUT_DIR" --format '%w%f' |
 while read file; do
     # Check if file is a .webp image
     if [[ "$file" == *.webp ]]; then
