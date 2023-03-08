@@ -22,4 +22,3 @@ while read file; do
         fi
     fi
 done
-
