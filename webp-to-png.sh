@@ -1,5 +1,10 @@
 #!/bin/bash
 
+command_exists()
+{
+    command -v -- "$1" >/dev/null 2>&1
+}
+
 # Load configuration from file
 source ./config.cfg
 
@@ -14,11 +19,26 @@ while read file; do
         # Convert file to .png
         filename=$(basename "$file")
         pngfile="${filename%.*}.png"
-        dwebp "$file" -o "$OUTPUT_DIR/$pngfile"
-        
-        # Delete original .webp file if option is set
-        if [[ "$DELETE_WEBP" == "true" ]]; then
-            rm "$file"
+        if command_exists dwebp
+        then
+            dwebp "$file" -o "$OUTPUT_DIR/$pngfile"
+        elif command_exists convert
+        then
+            convert -verbose "$file" "$OUTPUT_DIR/$pngfile"
+        elif command_exists gm
+        then
+            gm convert -verbose "$file" "$OUTPUT_DIR/$pngfile"
+        else
+            echo "Can't convert .webp image: no appropriate tool found!"
+            false # failed
+        fi
+
+        # Make sure to delete the file only if conversion succeeded.
+        if [ $? -eq 0 ]; then
+            # Delete original .webp file if option is set
+            if [[ "$DELETE_WEBP" == "true" ]]; then
+                rm "$file"
+            fi
         fi
     fi
 done
